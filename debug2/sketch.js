@@ -1,17 +1,18 @@
 let xPos = 220;
 let yPos = 0;
+let xSpeed = 1;
+let ySpeed = 4;
+
 
 function setup() {
-    let xSpeed = 1;
-    let ySpeed = 4;
-    createcanvas(500, 500);
+    createCanvas(500, 500);
     background(255);
+    noStroke();
 }
 
 function draw() {
     background(230);
 
-    noStroke();
     fill(0, 0, 255);
     rect(0, 0, 200, 500);
     rect(300, 0, 200, 500);
@@ -23,7 +24,7 @@ function draw() {
     xPos += xSpeed;
     yPos += ySpeed;
 
-    if (xPos < 225 || xPos > 275) {
+    if (xPos < 220 || xPos > 275) {
         xSpeed *= -1;
     
 
